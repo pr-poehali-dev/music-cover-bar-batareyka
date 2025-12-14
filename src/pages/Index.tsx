@@ -13,13 +13,10 @@ const Index = () => {
   };
 
   const schedule = [
-    { day: "Понедельник", time: "19:00", artist: "Acoustic Duo", genre: "Акустика" },
-    { day: "Вторник", time: "20:00", artist: "Jazz Quartet", genre: "Джаз" },
-    { day: "Среда", time: "19:30", artist: "Rock Cover Band", genre: "Рок" },
-    { day: "Четверг", time: "20:00", artist: "Blues Night", genre: "Блюз" },
-    { day: "Пятница", time: "21:00", artist: "Pop Hits Live", genre: "Поп" },
-    { day: "Суббота", time: "21:00", artist: "Retro Party", genre: "Ретро" },
-    { day: "Воскресенье", time: "19:00", artist: "Acoustic Evening", genre: "Акустика" },
+    { date: "16 декабря", day: "Понедельник", time: "19:00", artist: "Acoustic Duo", genre: "Акустика" },
+    { date: "18 декабря", day: "Среда", time: "19:30", artist: "Rock Cover Band", genre: "Рок" },
+    { date: "20 декабря", day: "Пятница", time: "21:00", artist: "Pop Hits Live", genre: "Поп" },
+    { date: "21 декабря", day: "Суббота", time: "21:00", artist: "Retro Party", genre: "Ретро" },
   ];
 
   const menuItems = {
@@ -243,8 +240,8 @@ const Index = () => {
                           <Icon name="Calendar" size={24} className="text-primary" />
                         </div>
                         <div>
-                          <h3 className="font-bold text-xl">{event.day}</h3>
-                          <p className="text-muted-foreground">{event.time}</p>
+                          <h3 className="font-bold text-xl">{event.date}</h3>
+                          <p className="text-muted-foreground">{event.day} • {event.time}</p>
                         </div>
                       </div>
                       <div className="text-left sm:text-right">
