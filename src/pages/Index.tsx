@@ -152,9 +152,12 @@ const Index = () => {
           <h2 className="text-5xl font-bold text-center mb-12">Галерея</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              "https://cdn.poehali.dev/projects/53b7f04f-914f-4775-8907-af61c06e571e/files/20d68c31-f743-4093-bbd3-8ebcd186794b.jpg",
-              "https://cdn.poehali.dev/projects/53b7f04f-914f-4775-8907-af61c06e571e/files/fe96ced2-9993-4d5e-abf4-ecb0d70cdab4.jpg",
-              "https://cdn.poehali.dev/projects/53b7f04f-914f-4775-8907-af61c06e571e/files/554866b8-a063-4207-a2bf-4e9f8f0480cc.jpg",
+              { url: "https://cdn.poehali.dev/files/1000009782.jpg", title: "Уютный зал" },
+              { url: "https://cdn.poehali.dev/files/1000009794.jpg", title: "Музыкальная стена" },
+              { url: "https://cdn.poehali.dev/files/1000010188.jpg", title: "Арт-декор" },
+              { url: "https://cdn.poehali.dev/files/1000009956.jpg", title: "Разливное пиво" },
+              { url: "https://cdn.poehali.dev/projects/53b7f04f-914f-4775-8907-af61c06e571e/files/fe96ced2-9993-4d5e-abf4-ecb0d70cdab4.jpg", title: "Живое выступление" },
+              { url: "https://cdn.poehali.dev/projects/53b7f04f-914f-4775-8907-af61c06e571e/files/554866b8-a063-4207-a2bf-4e9f8f0480cc.jpg", title: "Авторские коктейли" },
             ].map((img, idx) => (
               <div
                 key={idx}
@@ -162,16 +165,12 @@ const Index = () => {
                 style={{ animationDelay: `${idx * 0.1}s` }}
               >
                 <img
-                  src={img}
-                  alt={`Фото ${idx + 1}`}
+                  src={img.url}
+                  alt={img.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <p className="text-white font-semibold">
-                    {idx === 0 && "Интерьер бара"}
-                    {idx === 1 && "Живое выступление"}
-                    {idx === 2 && "Авторские коктейли"}
-                  </p>
+                  <p className="text-white font-semibold">{img.title}</p>
                 </div>
               </div>
             ))}
