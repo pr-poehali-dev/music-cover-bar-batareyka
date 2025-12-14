@@ -149,11 +149,12 @@ const Index = () => {
           <h2 className="text-5xl font-bold text-center mb-12">Галерея</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { url: "https://cdn.poehali.dev/files/1000010251.jpg", title: "Уютный зал" },
-              { url: "https://cdn.poehali.dev/files/1000010246.jpg", title: "Стильный интерьер" },
-              { url: "https://cdn.poehali.dev/files/1000010249.jpg", title: "Сцена и атмосфера" },
+              { url: "https://cdn.poehali.dev/files/1000010248.jpg", title: "Центральный зал" },
+              { url: "https://cdn.poehali.dev/files/1000010244.jpg", title: "Уютные столики" },
               { url: "https://cdn.poehali.dev/files/1000010242.jpg", title: "Авторские сорта пива" },
               { url: "https://cdn.poehali.dev/files/1000010243.jpg", title: "Арт-декор" },
+              { url: "https://cdn.poehali.dev/files/1000010246.jpg", title: "Стильный интерьер" },
+              { url: "https://cdn.poehali.dev/files/1000010249.jpg", title: "Сцена и атмосфера" },
             ].map((img, idx) => (
               <div
                 key={idx}
@@ -252,6 +253,38 @@ const Index = () => {
                 </Card>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="hours" className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <h2 className="text-5xl font-bold text-center mb-12">Часы работы</h2>
+          <div className="max-w-2xl mx-auto">
+            <Card className="p-8 bg-card border-border">
+              <CardContent className="p-0">
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center py-3 border-b border-border">
+                    <span className="text-lg font-medium">Понедельник - Четверг</span>
+                    <span className="text-lg text-primary font-semibold">15:00 - 02:00</span>
+                  </div>
+                  <div className="flex justify-between items-center py-3 border-b border-border">
+                    <span className="text-lg font-medium">Пятница - Суббота</span>
+                    <span className="text-lg text-primary font-semibold">15:00 - 06:00</span>
+                  </div>
+                  <div className="flex justify-between items-center py-3">
+                    <span className="text-lg font-medium">Воскресенье</span>
+                    <span className="text-lg text-primary font-semibold">15:00 - 02:00</span>
+                  </div>
+                </div>
+                <div className="mt-8 p-4 bg-primary/10 rounded-lg">
+                  <div className="flex items-start gap-3">
+                    <Icon name="Info" size={24} className="text-primary mt-1" />
+                    <p className="text-muted-foreground">Последний заказ принимается за 30 минут до закрытия. Бронирование столиков по телефону.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
