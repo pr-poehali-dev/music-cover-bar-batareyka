@@ -266,15 +266,15 @@ const Index = () => {
                 <div className="space-y-4">
                   <div className="flex justify-between items-center py-3 border-b border-border">
                     <span className="text-lg font-medium">Понедельник - Четверг</span>
-                    <span className="text-lg text-primary font-semibold">15:00 - 02:00</span>
+                    <span className="text-lg text-primary font-semibold">11:00 - 23:00</span>
                   </div>
                   <div className="flex justify-between items-center py-3 border-b border-border">
-                    <span className="text-lg font-medium">Пятница - Суббота</span>
-                    <span className="text-lg text-primary font-semibold">15:00 - 06:00</span>
+                    <span className="text-lg font-medium">Пятница</span>
+                    <span className="text-lg text-primary font-semibold">11:00 - 06:00</span>
                   </div>
                   <div className="flex justify-between items-center py-3">
-                    <span className="text-lg font-medium">Воскресенье</span>
-                    <span className="text-lg text-primary font-semibold">15:00 - 02:00</span>
+                    <span className="text-lg font-medium">Суббота</span>
+                    <span className="text-lg text-primary font-semibold">19:00 - 06:00</span>
                   </div>
                 </div>
                 <div className="mt-8 p-4 bg-primary/10 rounded-lg">
