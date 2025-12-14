@@ -152,7 +152,6 @@ const Index = () => {
               { url: "https://cdn.poehali.dev/files/1000009782.jpg", title: "Уютный зал" },
               { url: "https://cdn.poehali.dev/files/1000009794.jpg", title: "Музыкальная стена" },
               { url: "https://cdn.poehali.dev/files/1000010188.jpg", title: "Арт-декор" },
-              { url: "https://cdn.poehali.dev/files/1000009956.jpg", title: "Разливное пиво" },
               { url: "https://cdn.poehali.dev/projects/53b7f04f-914f-4775-8907-af61c06e571e/files/fe96ced2-9993-4d5e-abf4-ecb0d70cdab4.jpg", title: "Живое выступление" },
               { url: "https://cdn.poehali.dev/projects/53b7f04f-914f-4775-8907-af61c06e571e/files/554866b8-a063-4207-a2bf-4e9f8f0480cc.jpg", title: "Авторские коктейли" },
             ].map((img, idx) => (
