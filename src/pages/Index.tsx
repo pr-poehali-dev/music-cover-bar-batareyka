@@ -119,7 +119,7 @@ const Index = () => {
                 <Card className="text-center p-4 bg-muted border-border">
                   <Icon name="Music" size={32} className="mx-auto mb-2 text-primary" />
                   <p className="font-semibold">Живая музыка</p>
-                  <p className="text-sm text-muted-foreground">Каждый вечер</p>
+                  <p className="text-sm text-muted-foreground">Каждую неделю</p>
                 </Card>
                 <Card className="text-center p-4 bg-muted border-border">
                   <Icon name="Users" size={32} className="mx-auto mb-2 text-primary" />
