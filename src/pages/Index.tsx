@@ -149,11 +149,11 @@ const Index = () => {
           <h2 className="text-5xl font-bold text-center mb-12">Галерея</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { url: "https://cdn.poehali.dev/files/1000009782.jpg", title: "Уютный зал" },
-              { url: "https://cdn.poehali.dev/files/1000009794.jpg", title: "Музыкальная стена" },
-              { url: "https://cdn.poehali.dev/files/1000010188.jpg", title: "Арт-декор" },
-              { url: "https://cdn.poehali.dev/projects/53b7f04f-914f-4775-8907-af61c06e571e/files/fe96ced2-9993-4d5e-abf4-ecb0d70cdab4.jpg", title: "Живое выступление" },
-              { url: "https://cdn.poehali.dev/projects/53b7f04f-914f-4775-8907-af61c06e571e/files/554866b8-a063-4207-a2bf-4e9f8f0480cc.jpg", title: "Авторские коктейли" },
+              { url: "https://cdn.poehali.dev/files/1000010251.jpg", title: "Уютный зал" },
+              { url: "https://cdn.poehali.dev/files/1000010246.jpg", title: "Стильный интерьер" },
+              { url: "https://cdn.poehali.dev/files/1000010249.jpg", title: "Сцена и атмосфера" },
+              { url: "https://cdn.poehali.dev/files/1000010242.jpg", title: "Авторские сорта пива" },
+              { url: "https://cdn.poehali.dev/files/1000010243.jpg", title: "Арт-декор" },
             ].map((img, idx) => (
               <div
                 key={idx}
