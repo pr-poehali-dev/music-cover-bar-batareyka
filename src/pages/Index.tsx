@@ -47,7 +47,7 @@ const Index = () => {
               <h1 className="text-2xl font-bold">Батарейка</h1>
             </div>
             <div className="hidden md:flex gap-6">
-              {["home", "about", "gallery", "menu", "schedule"].map((section) => (
+              {["home", "about", "gallery", "menu", "schedule", "location"].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -60,6 +60,7 @@ const Index = () => {
                   {section === "gallery" && "Галерея"}
                   {section === "menu" && "Меню"}
                   {section === "schedule" && "Расписание"}
+                  {section === "location" && "Контакты"}
                 </button>
               ))}
             </div>
@@ -255,6 +256,83 @@ const Index = () => {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="location" className="py-20 bg-card">
+        <div className="container mx-auto px-4">
+          <h2 className="text-5xl font-bold text-center mb-12">Как нас найти</h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="animate-fade-in">
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 p-3 rounded-lg">
+                    <Icon name="MapPin" size={28} className="text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-xl mb-2">Адрес</h3>
+                    <p className="text-muted-foreground text-lg">Земляной вал 50а ст3</p>
+                    <p className="text-muted-foreground">Москва, Россия</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 p-3 rounded-lg">
+                    <Icon name="Navigation" size={28} className="text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-xl mb-2">Как добраться</h3>
+                    <p className="text-muted-foreground mb-2">
+                      <strong>М Курская</strong> - 5 минут пешком
+                    </p>
+                    <p className="text-muted-foreground">
+                      <strong>М Чкаловская</strong> - 7 минут пешком
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 p-3 rounded-lg">
+                    <Icon name="Clock" size={28} className="text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-xl mb-2">Часы работы</h3>
+                    <div className="text-muted-foreground space-y-1">
+                      <p>Пн-Чт: 18:00 - 02:00</p>
+                      <p>Пт-Сб: 18:00 - 04:00</p>
+                      <p>Вс: 18:00 - 00:00</p>
+                    </div>
+                  </div>
+                </div>
+
+                <Button
+                  size="lg"
+                  className="w-full bg-primary hover:bg-primary/90"
+                  onClick={() =>
+                    window.open(
+                      "https://yandex.ru/maps/?rtext=~55.7581,37.6600&rtt=auto",
+                      "_blank"
+                    )
+                  }
+                >
+                  <Icon name="Navigation" size={20} className="mr-2" />
+                  Построить маршрут
+                </Button>
+              </div>
+            </div>
+
+            <div className="animate-scale-in h-[500px] rounded-lg overflow-hidden shadow-2xl">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?ll=37.660000%2C55.758100&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzAwMDk1ORJd0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCX0LXQvNC70Y_QvdC-0Lkg0LLQsNC7LCA1MCDRgdGC0YDQvtC10L3QuNC1IDMiCg1uuxZCFTQeWkI%2C&z=16"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                allowFullScreen
+                style={{ position: "relative" }}
+                title="Карта местоположения бара Батарейка"
+              ></iframe>
             </div>
           </div>
         </div>
