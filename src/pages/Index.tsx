@@ -335,6 +335,30 @@ const Index = () => {
                   </div>
                 </div>
 
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 p-3 rounded-lg">
+                    <Icon name="Phone" size={28} className="text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-xl mb-2">Телефон</h3>
+                    <a href="tel:+79262457585" className="text-primary text-lg hover:underline">
+                      +7 (926) 245-75-85
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 p-3 rounded-lg">
+                    <Icon name="Mail" size={28} className="text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-xl mb-2">Email</h3>
+                    <a href="mailto:batareika.klub@mail.ru" className="text-primary text-lg hover:underline">
+                      batareika.klub@mail.ru
+                    </a>
+                  </div>
+                </div>
+
                 <Button
                   size="lg"
                   className="w-full bg-primary hover:bg-primary/90"
