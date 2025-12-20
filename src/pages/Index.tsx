@@ -1,10 +1,34 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("home");
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    date: "",
+    time: "",
+    guests: "",
+    message: ""
+  });
+  const [formStatus, setFormStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setFormStatus("success");
+    setTimeout(() => {
+      setFormData({ name: "", phone: "", date: "", time: "", guests: "", message: "" });
+      setFormStatus("idle");
+    }, 3000);
+  };
 
   const scrollToSection = (id: string) => {
     setActiveSection(id);
@@ -349,6 +373,108 @@ const Index = () => {
                     <p className="text-muted-foreground">Последний заказ принимается за 30 минут до закрытия. Бронирование столиков по телефону.</p>
                   </div>
                 </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section id="booking" className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-5xl font-bold text-center mb-12">Забронировать столик</h2>
+          <div className="max-w-2xl mx-auto">
+            <Card className="p-8 bg-card border-border">
+              <CardContent className="p-0">
+                {formStatus === "success" ? (
+                  <div className="text-center py-8 animate-fade-in">
+                    <div className="mb-4 flex justify-center">
+                      <div className="bg-primary/10 p-4 rounded-full">
+                        <Icon name="Check" size={48} className="text-primary" />
+                      </div>
+                    </div>
+                    <h3 className="text-2xl font-bold mb-2">Заявка принята!</h3>
+                    <p className="text-muted-foreground">Мы свяжемся с вами в ближайшее время для подтверждения бронирования.</p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium mb-2">Ваше имя *</label>
+                      <Input
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        placeholder="Иван Иванов"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium mb-2">Телефон *</label>
+                      <Input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        required
+                        placeholder="+7 (999) 123-45-67"
+                      />
+                    </div>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <label htmlFor="date" className="block text-sm font-medium mb-2">Дата *</label>
+                        <Input
+                          id="date"
+                          name="date"
+                          type="date"
+                          value={formData.date}
+                          onChange={handleInputChange}
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="time" className="block text-sm font-medium mb-2">Время *</label>
+                        <Input
+                          id="time"
+                          name="time"
+                          type="time"
+                          value={formData.time}
+                          onChange={handleInputChange}
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <label htmlFor="guests" className="block text-sm font-medium mb-2">Количество гостей *</label>
+                      <Input
+                        id="guests"
+                        name="guests"
+                        type="number"
+                        min="1"
+                        max="20"
+                        value={formData.guests}
+                        onChange={handleInputChange}
+                        required
+                        placeholder="2"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium mb-2">Комментарий</label>
+                      <Textarea
+                        id="message"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        placeholder="Особые пожелания или дополнительная информация"
+                        rows={4}
+                      />
+                    </div>
+                    <Button type="submit" className="w-full bg-primary hover:bg-primary/90" size="lg">
+                      <Icon name="Calendar" size={20} className="mr-2" />
+                      Отправить заявку
+                    </Button>
+                  </form>
+                )}
               </CardContent>
             </Card>
           </div>
