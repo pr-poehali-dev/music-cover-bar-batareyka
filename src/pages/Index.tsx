@@ -409,20 +409,20 @@ const Index = () => {
                 </p>
                 <p className="flex items-center gap-2 justify-center md:justify-start">
                   <Icon name="Phone" size={18} className="text-primary" />
-                  +7 (495) 123-45-67
+                  +7 (926) 245-75-85
                 </p>
                 <p className="flex items-center gap-2 justify-center md:justify-start">
                   <Icon name="Mail" size={18} className="text-primary" />
-                  info@batareika.bar
+                  batareika.klub@mail.ru
                 </p>
               </div>
             </div>
             <div>
               <h4 className="font-semibold text-lg mb-4">Часы работы</h4>
               <div className="space-y-2 text-muted-foreground">
-                <p>Пн-Чт: 18:00 - 02:00</p>
-                <p>Пт-Сб: 18:00 - 04:00</p>
-                <p>Вс: 18:00 - 00:00</p>
+                <p>Понедельник - Четверг: 11:00 - 23:00</p>
+                <p>Пятница: 11:00 - 06:00</p>
+                <p>Суббота: 19:00 - 06:00</p>
               </div>
             </div>
           </div>
