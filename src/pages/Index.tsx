@@ -149,12 +149,12 @@ const Index = () => {
           <h2 className="text-5xl font-bold text-center mb-12">Галерея</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
+              { url: "https://cdn.poehali.dev/files/1000010250.jpg", title: "Уютный зал с новогодней атмосферой" },
+              { url: "https://cdn.poehali.dev/files/1000010350.jpg", title: "Креативный дизайн санузла" },
+              { url: "https://cdn.poehali.dev/files/1000009794.jpg", title: "Музыкальный декор" },
+              { url: "https://cdn.poehali.dev/files/1000010188.jpg", title: "Арт-объекты" },
               { url: "https://cdn.poehali.dev/files/1000010248.jpg", title: "Центральный зал" },
               { url: "https://cdn.poehali.dev/files/1000010244.jpg", title: "Уютные столики" },
-              { url: "https://cdn.poehali.dev/files/1000010242.jpg", title: "Авторские сорта пива" },
-              { url: "https://cdn.poehali.dev/files/1000010243.jpg", title: "Арт-декор" },
-              { url: "https://cdn.poehali.dev/files/1000010246.jpg", title: "Стильный интерьер" },
-              { url: "https://cdn.poehali.dev/files/1000010249.jpg", title: "Сцена и атмосфера" },
             ].map((img, idx) => (
               <div
                 key={idx}
