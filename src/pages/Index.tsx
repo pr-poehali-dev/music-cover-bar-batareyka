@@ -13,10 +13,8 @@ const Index = () => {
   };
 
   const schedule = [
-    { date: "16 декабря", day: "Понедельник", time: "19:00", artist: "Acoustic Duo", genre: "Акустика" },
-    { date: "18 декабря", day: "Среда", time: "19:30", artist: "Rock Cover Band", genre: "Рок" },
-    { date: "20 декабря", day: "Пятница", time: "21:00", artist: "Pop Hits Live", genre: "Поп" },
-    { date: "21 декабря", day: "Суббота", time: "21:00", artist: "Retro Party", genre: "Ретро" },
+    { date: "16 января", day: "Четверг", time: "21:00", artist: "Кавер - Диско парти", genre: "Лучшие хиты всех времен в современной обработке" },
+    { date: "17 января", day: "Пятница", time: "21:00", artist: "Кавер всегда!", genre: "Миксы, каверы, трибьюты хитов от нашего Диджея" },
   ];
 
   const menuItems = {
