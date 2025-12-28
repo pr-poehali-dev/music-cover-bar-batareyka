@@ -97,7 +97,7 @@ const Index = () => {
         id="home"
         className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
         style={{
-          backgroundImage: `linear-gradient(rgba(26, 31, 44, 0.8), rgba(26, 31, 44, 0.8)), url('https://cdn.poehali.dev/projects/53b7f04f-914f-4775-8907-af61c06e571e/files/20d68c31-f743-4093-bbd3-8ebcd186794b.jpg')`,
+          backgroundImage: `linear-gradient(rgba(26, 31, 44, 0.7), rgba(26, 31, 44, 0.7)), url('https://cdn.poehali.dev/files/1000010552.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
