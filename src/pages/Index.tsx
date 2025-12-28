@@ -393,7 +393,7 @@ const Index = () => {
                   className="w-full bg-primary hover:bg-primary/90"
                   onClick={() =>
                     window.open(
-                      "https://yandex.ru/maps/?rtext=~55.758083,37.659855&rtt=auto",
+                      "https://yandex.ru/maps/?rtext=~55.751148,37.655248&rtt=auto",
                       "_blank"
                     )
                   }
@@ -406,7 +406,7 @@ const Index = () => {
 
             <div className="animate-scale-in h-[500px] rounded-lg overflow-hidden shadow-2xl">
               <iframe
-                src="https://yandex.ru/map-widget/v1/?ll=37.659855%2C55.758083&z=17&pt=37.659855%2C55.758083%2Cpm2rdm"
+                src="https://yandex.ru/map-widget/v1/?ll=37.655248%2C55.751148&z=17&pt=37.655248%2C55.751148%2Cpm2rdm"
                 width="100%"
                 height="100%"
                 frameBorder="0"
