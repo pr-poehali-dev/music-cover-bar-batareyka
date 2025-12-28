@@ -393,7 +393,7 @@ const Index = () => {
                   className="w-full bg-primary hover:bg-primary/90"
                   onClick={() =>
                     window.open(
-                      "https://yandex.ru/maps/?rtext=~55.7581,37.6600&rtt=auto",
+                      "https://yandex.ru/maps/?rtext=~55.758083,37.659855&rtt=auto",
                       "_blank"
                     )
                   }
@@ -406,13 +406,13 @@ const Index = () => {
 
             <div className="animate-scale-in h-[500px] rounded-lg overflow-hidden shadow-2xl">
               <iframe
-                src="https://yandex.ru/map-widget/v1/?ll=37.660000%2C55.758100&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzE3NTE0NhJW0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINGD0LvQuNGG0LAg0JfQtdC80LvRj9C90L7QuSDQktCw0LssIDUw0JAsINGB0YLRgNC-0LXQvdC40LUgMyIKDci7FkIVGx5ZQg%2C%2C&z=16.5"
+                src="https://yandex.ru/map-widget/v1/?ll=37.659855%2C55.758083&z=17&pt=37.659855%2C55.758083%2Cpm2rdm"
                 width="100%"
                 height="100%"
                 frameBorder="0"
                 allowFullScreen
                 style={{ position: "relative" }}
-                title="Карта местоположения бара Батарейка"
+                title="Карта местоположения бара Батарейка - Земляной вал 50а строение 3"
               ></iframe>
             </div>
           </div>
