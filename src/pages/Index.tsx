@@ -406,7 +406,7 @@ const Index = () => {
 
             <div className="animate-scale-in h-[500px] rounded-lg overflow-hidden shadow-2xl">
               <iframe
-                src="https://yandex.ru/map-widget/v1/?ll=37.660012%2C55.757965&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNTM1NDYzMDk2Eki80YDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINGD0LvQuNGG0LAg0JfQtdC80LvRj9C90L7QuSDQktCw0LssIDUw0JAg0YHRgtGA0L7QtdC90LjQtSAzIgoNyLsWQhUbHllC&z=17"
+                src="https://yandex.ru/map-widget/v1/?ll=37.660000%2C55.758100&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzE3NTE0NhJW0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINGD0LvQuNGG0LAg0JfQtdC80LvRj9C90L7QuSDQktCw0LssIDUw0JAsINGB0YLRgNC-0LXQvdC40LUgMyIKDci7FkIVGx5ZQg%2C%2C&z=16.5"
                 width="100%"
                 height="100%"
                 frameBorder="0"
