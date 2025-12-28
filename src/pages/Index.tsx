@@ -68,7 +68,7 @@ const Index = () => {
               <h1 className="text-2xl font-bold">Батарейка</h1>
             </div>
             <div className="hidden md:flex gap-6">
-              {["home", "about", "gallery", "menu", "schedule", "reviews", "location"].map((section) => (
+              {["home", "about", "gallery", "menu", "schedule", "location"].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -81,7 +81,6 @@ const Index = () => {
                   {section === "gallery" && "Галерея"}
                   {section === "menu" && "Меню"}
                   {section === "schedule" && "Расписание"}
-                  {section === "reviews" && "Отзывы"}
                   {section === "location" && "Контакты"}
                 </button>
               ))}
@@ -282,71 +281,6 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="reviews" className="py-20 bg-muted">
-        <div className="container mx-auto px-4">
-          <h2 className="text-5xl font-bold text-center mb-12">Отзывы посетителей</h2>
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {[
-              {
-                name: "Анна Сергеева",
-                rating: 5,
-                text: "Потрясающая атмосфера и живая музыка! Каверы исполняются настолько качественно, что создается ощущение концерта любимой группы. Коктейли отменные, персонал очень приветливый.",
-                date: "2 дня назад"
-              },
-              {
-                name: "Дмитрий Волков",
-                rating: 5,
-                text: "Отличное место для вечера пятницы! Уютный интерьер, классная музыка и вкусная еда. Феттучине с белыми грибами - просто бомба. Обязательно вернемся еще.",
-                date: "5 дней назад"
-              },
-              {
-                name: "Елена Михайлова",
-                rating: 5,
-                text: "Были на открытии - невероятные эмоции! Музыканты профессионалы своего дела, играют так, что хочется петь и танцевать. Интерьер стильный, особенно понравились арт-объекты.",
-                date: "1 неделю назад"
-              },
-              {
-                name: "Алексей Петров",
-                rating: 4,
-                text: "Хороший бар с живой музыкой. Цены адекватные, порции щедрые. Единственное - в выходные бывает многолюдно, лучше бронировать столик заранее.",
-                date: "1 неделю назад"
-              },
-              {
-                name: "Мария Новикова",
-                rating: 5,
-                text: "Влюбилась в это место с первого посещения! Каверы настолько хороши, что узнаешь все любимые песни, но в новом звучании. Мохито здесь лучший в городе!",
-                date: "2 недели назад"
-              },
-              {
-                name: "Игорь Смирнов",
-                rating: 5,
-                text: "Отмечали день рождения друга - все на высшем уровне! Музыка, обслуживание, еда - всё отлично. Спасибо команде Батарейки за незабываемый вечер!",
-                date: "3 недели назад"
-              },
-            ].map((review, idx) => (
-              <Card
-                key={idx}
-                className="p-6 bg-card border-border hover:border-primary transition-all animate-fade-in"
-                style={{ animationDelay: `${idx * 0.1}s` }}
-              >
-                <CardContent className="p-0">
-                  <div className="flex items-center justify-between mb-4">
-                    <h4 className="font-semibold text-lg">{review.name}</h4>
-                    <div className="flex gap-1">
-                      {Array.from({ length: review.rating }).map((_, i) => (
-                        <Icon key={i} name="Star" size={16} className="text-primary fill-primary" />
-                      ))}
-                    </div>
-                  </div>
-                  <p className="text-muted-foreground mb-4">{review.text}</p>
-                  <p className="text-sm text-muted-foreground/70">{review.date}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section id="hours" className="py-20 bg-card">
         <div className="container mx-auto px-4">
           <h2 className="text-5xl font-bold text-center mb-12">Часы работы</h2>
@@ -373,108 +307,6 @@ const Index = () => {
                     <p className="text-muted-foreground">Последний заказ принимается за 30 минут до закрытия. Бронирование столиков по телефону.</p>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      <section id="booking" className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-5xl font-bold text-center mb-12">Забронировать столик</h2>
-          <div className="max-w-2xl mx-auto">
-            <Card className="p-8 bg-card border-border">
-              <CardContent className="p-0">
-                {formStatus === "success" ? (
-                  <div className="text-center py-8 animate-fade-in">
-                    <div className="mb-4 flex justify-center">
-                      <div className="bg-primary/10 p-4 rounded-full">
-                        <Icon name="Check" size={48} className="text-primary" />
-                      </div>
-                    </div>
-                    <h3 className="text-2xl font-bold mb-2">Заявка принята!</h3>
-                    <p className="text-muted-foreground">Мы свяжемся с вами в ближайшее время для подтверждения бронирования.</p>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium mb-2">Ваше имя *</label>
-                      <Input
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        placeholder="Иван Иванов"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium mb-2">Телефон *</label>
-                      <Input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        required
-                        placeholder="+7 (999) 123-45-67"
-                      />
-                    </div>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <label htmlFor="date" className="block text-sm font-medium mb-2">Дата *</label>
-                        <Input
-                          id="date"
-                          name="date"
-                          type="date"
-                          value={formData.date}
-                          onChange={handleInputChange}
-                          required
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="time" className="block text-sm font-medium mb-2">Время *</label>
-                        <Input
-                          id="time"
-                          name="time"
-                          type="time"
-                          value={formData.time}
-                          onChange={handleInputChange}
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <label htmlFor="guests" className="block text-sm font-medium mb-2">Количество гостей *</label>
-                      <Input
-                        id="guests"
-                        name="guests"
-                        type="number"
-                        min="1"
-                        max="20"
-                        value={formData.guests}
-                        onChange={handleInputChange}
-                        required
-                        placeholder="2"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium mb-2">Комментарий</label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        placeholder="Особые пожелания или дополнительная информация"
-                        rows={4}
-                      />
-                    </div>
-                    <Button type="submit" className="w-full bg-primary hover:bg-primary/90" size="lg">
-                      <Icon name="Calendar" size={20} className="mr-2" />
-                      Отправить заявку
-                    </Button>
-                  </form>
-                )}
               </CardContent>
             </Card>
           </div>
