@@ -103,6 +103,11 @@ const Index = () => {
         }}
       >
         <div className="container mx-auto px-4 text-center animate-fade-in">
+          <div className="mb-6 inline-block bg-primary/20 px-6 py-3 rounded-full border-2 border-primary">
+            <p className="text-xl md:text-2xl font-semibold text-primary">
+              Мы открываем двери 13 января в 11:00
+            </p>
+          </div>
           <h2 className="text-6xl md:text-7xl font-bold mb-6">Батарейка</h2>
           <p className="text-2xl md:text-3xl mb-4 text-secondary">Музыкальный кавер-бар</p>
           <p className="text-xl mb-8 text-muted-foreground max-w-2xl mx-auto">
