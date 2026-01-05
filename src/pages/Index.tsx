@@ -375,7 +375,10 @@ const Index = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl mb-2">Телефон</h3>
-                    <a href="tel:+79262457585" className="text-primary text-lg hover:underline">
+                    <a href="tel:+79017075859" className="text-primary text-lg hover:underline block mb-1">
+                      +7 (901) 707-58-59
+                    </a>
+                    <a href="tel:+79262457585" className="text-primary text-lg hover:underline block">
                       +7 (926) 245-75-85
                     </a>
                   </div>
@@ -440,6 +443,10 @@ const Index = () => {
                 <p className="flex items-center gap-2 justify-center md:justify-start">
                   <Icon name="MapPin" size={18} className="text-primary" />
                   Земляной вал 50а ст3
+                </p>
+                <p className="flex items-center gap-2 justify-center md:justify-start">
+                  <Icon name="Phone" size={18} className="text-primary" />
+                  +7 (901) 707-58-59
                 </p>
                 <p className="flex items-center gap-2 justify-center md:justify-start">
                   <Icon name="Phone" size={18} className="text-primary" />
