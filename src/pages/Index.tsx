@@ -85,9 +85,12 @@ const Index = () => {
                 </button>
               ))}
             </div>
-            <Button className="bg-primary hover:bg-primary/90">
+            <Button 
+              className="bg-primary hover:bg-primary/90"
+              onClick={() => window.open('tel:+79017075859', '_self')}
+            >
               <Icon name="Phone" size={18} className="mr-2" />
-              Забронировать
+              Заказ столов
             </Button>
           </div>
         </div>
