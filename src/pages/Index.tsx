@@ -37,10 +37,11 @@ const Index = () => {
   };
 
   const schedule = [
-    { date: "16 января", day: "Пятница", time: "21:00", artist: "Кавер - Disco party", genre: "Лучшие хиты всех времен в современной обработке" },
-    { date: "17 января", day: "Суббота", time: "21:00", artist: "Открытие кавер-бара \"Батарейка\". Концерт группы Юность", genre: "Грандиозное открытие" },
-    { date: "23 января", day: "Пятница", time: "21:00", artist: "Кавер всегда!", genre: "Миксы, каверы, трибьюты хитов от нашего Dj" },
-    { date: "24 января", day: "Суббота", time: "21:00", artist: "Cover-Party", genre: "Вечеринка с лучшими каверами" },
+    { date: "16 января", day: "Пятница", time: "21:00", artist: "Кавер - Disco party", genre: "Лучшие хиты всех времен в современной обработке", price: "" },
+    { date: "17 января", day: "Суббота", time: "21:00", artist: "Открытие кавер-бара \"Батарейка\". Концерт группы Юность", genre: "Грандиозное открытие", price: "Вход бесплатный" },
+    { date: "18 января", day: "Воскресенье", time: "21:00", artist: "Кавер - Disco party", genre: "Продолжаем праздновать открытие", price: "Вход до 23:00 — 250₽, после 23:00 — 500₽" },
+    { date: "23 января", day: "Пятница", time: "21:00", artist: "Кавер всегда!", genre: "Миксы, каверы, трибьюты хитов от нашего Dj", price: "" },
+    { date: "24 января", day: "Суббота", time: "21:00", artist: "Cover-Party", genre: "Вечеринка с лучшими каверами", price: "" },
   ];
 
   const menuItems = {
@@ -281,6 +282,7 @@ const Index = () => {
                       <div className="text-left sm:text-right">
                         <p className="font-semibold text-lg">{event.artist}</p>
                         <p className="text-accent">{event.genre}</p>
+                        {event.price && <p className="text-primary font-semibold mt-1">{event.price}</p>}
                       </div>
                     </div>
                   </CardContent>
