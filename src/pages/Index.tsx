@@ -160,13 +160,11 @@ const Index = () => {
               </div>
             </div>
             <div className="animate-scale-in">
-              <a href="https://batareika-club.ru" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="https://cdn.poehali.dev/files/1000010672.jpg"
-                  alt="Открытие кавер-бара Батарейка"
-                  className="rounded-lg shadow-2xl cursor-pointer hover:opacity-90 transition-opacity"
-                />
-              </a>
+              <img
+                src="https://cdn.poehali.dev/projects/53b7f04f-914f-4775-8907-af61c06e571e/files/fbce9222-4752-44f6-b4a0-5a192bf3ae4a.jpg"
+                alt="Бар временно не работает"
+                className="rounded-lg shadow-2xl"
+              />
             </div>
           </div>
         </div>
