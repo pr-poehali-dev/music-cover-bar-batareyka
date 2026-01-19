@@ -250,38 +250,6 @@ const Index = () => {
 
 
 
-      <section id="hours" className="py-20 bg-card">
-        <div className="container mx-auto px-4">
-          <h2 className="text-5xl font-bold text-center mb-12">Часы работы</h2>
-          <div className="max-w-2xl mx-auto">
-            <Card className="p-8 bg-card border-border">
-              <CardContent className="p-0">
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center py-3 border-b border-border">
-                    <span className="text-lg font-medium">Понедельник - Четверг</span>
-                    <span className="text-lg text-primary font-semibold">11:00 - 23:00</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3 border-b border-border">
-                    <span className="text-lg font-medium">Пятница</span>
-                    <span className="text-lg text-primary font-semibold">11:00 - 06:00</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-lg font-medium">Суббота</span>
-                    <span className="text-lg text-primary font-semibold">19:00 - 06:00</span>
-                  </div>
-                </div>
-                <div className="mt-8 p-4 bg-primary/10 rounded-lg">
-                  <div className="flex items-start gap-3">
-                    <Icon name="Info" size={24} className="text-primary mt-1" />
-                    <p className="text-muted-foreground">Последний заказ принимается за 30 минут до закрытия. Бронирование столиков по телефону.</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       <section id="location" className="py-20 bg-card">
         <div className="container mx-auto px-4">
           <h2 className="text-5xl font-bold text-center mb-12">Как нас найти</h2>
@@ -311,20 +279,6 @@ const Index = () => {
                     <p className="text-muted-foreground">
                       <strong>М Чкаловская</strong> - 7 минут пешком
                     </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary/10 p-3 rounded-lg">
-                    <Icon name="Clock" size={28} className="text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-xl mb-2">Часы работы</h3>
-                    <div className="text-muted-foreground space-y-1">
-                      <p>Понедельник - Четверг: 11:00 - 23:00</p>
-                      <p>Пятница: 11:00 - 06:00</p>
-                      <p>Суббота: 19:00 - 06:00</p>
-                    </div>
                   </div>
                 </div>
 
