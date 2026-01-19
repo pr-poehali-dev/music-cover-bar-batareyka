@@ -342,7 +342,7 @@ const Index = () => {
 
       <footer className="bg-card border-t border-border py-12">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
+          <div className="grid md:grid-cols-2 gap-8 text-center md:text-left">
             <div>
               <div className="flex items-center gap-2 justify-center md:justify-start mb-4">
                 <Icon name="Music" size={28} className="text-primary" />
@@ -371,14 +371,7 @@ const Index = () => {
                 </p>
               </div>
             </div>
-            <div>
-              <h4 className="font-semibold text-lg mb-4">Часы работы</h4>
-              <div className="space-y-2 text-muted-foreground">
-                <p>Понедельник - Четверг: 11:00 - 23:00</p>
-                <p>Пятница: 11:00 - 06:00</p>
-                <p>Суббота: 19:00 - 06:00</p>
-              </div>
-            </div>
+
           </div>
           <div className="mt-8 pt-8 border-t border-border text-center text-muted-foreground">
             <p>&copy; 2024 Батарейка. Все права защищены.</p>
