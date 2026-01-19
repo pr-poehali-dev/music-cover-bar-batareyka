@@ -36,12 +36,7 @@ const Index = () => {
     element?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const schedule = [
-    { date: "16 января", day: "Пятница", time: "21:00", artist: "Кавер - Disco party", genre: "Лучшие хиты всех времен в современной обработке", price: "Вход бесплатный" },
-    { date: "17 января", day: "Суббота", time: "21:00", artist: "Открытие кавер-бара \"Батарейка\". Концерт группы Юность", genre: "Грандиозное открытие", price: "Вход до 23:00 — 250₽, после 23:00 — 500₽" },
-    { date: "23 января", day: "Пятница", time: "21:00", artist: "Кавер всегда!", genre: "Миксы, каверы, трибьюты хитов от нашего Dj", price: "" },
-    { date: "24 января", day: "Суббота", time: "21:00", artist: "Cover-Party", genre: "Вечеринка с лучшими каверами", price: "" },
-  ];
+
 
   const menuItems = {
     drinks: [
@@ -68,7 +63,7 @@ const Index = () => {
               <h1 className="text-2xl font-bold">Батарейка</h1>
             </div>
             <div className="hidden md:flex gap-6">
-              {["home", "about", "gallery", "menu", "schedule", "location"].map((section) => (
+              {["home", "about", "gallery", "menu", "location"].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -80,7 +75,6 @@ const Index = () => {
                   {section === "about" && "О баре"}
                   {section === "gallery" && "Галерея"}
                   {section === "menu" && "Меню"}
-                  {section === "schedule" && "Расписание"}
                   {section === "location" && "Контакты"}
                 </button>
               ))}
@@ -108,7 +102,7 @@ const Index = () => {
         <div className="container mx-auto px-4 text-center animate-fade-in">
           <div className="mb-6 inline-block bg-primary/20 px-6 py-3 rounded-full border-2 border-primary">
             <p className="text-xl md:text-2xl font-semibold text-primary">
-              Мы открываем двери 13 января в 11:00
+              Клуб временно не работает
             </p>
           </div>
           <h2 className="text-6xl md:text-7xl font-bold mb-6">Батарейка</h2>
@@ -125,9 +119,9 @@ const Index = () => {
           <Button
             size="lg"
             className="bg-primary hover:bg-primary/90 text-lg px-8 py-6"
-            onClick={() => scrollToSection("schedule")}
+            onClick={() => scrollToSection("location")}
           >
-            Посмотреть расписание
+            Связаться с нами
           </Button>
         </div>
       </section>
@@ -256,41 +250,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="schedule" className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-5xl font-bold text-center mb-12">Расписание</h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="grid gap-4">
-              {schedule.map((event, idx) => (
-                <Card
-                  key={idx}
-                  className="p-6 bg-card border-border hover:border-primary transition-all hover:shadow-lg animate-fade-in"
-                  style={{ animationDelay: `${idx * 0.05}s` }}
-                >
-                  <CardContent className="p-0">
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                      <div className="flex items-center gap-4">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                          <Icon name="Calendar" size={24} className="text-primary" />
-                        </div>
-                        <div>
-                          <h3 className="font-bold text-xl">{event.date}</h3>
-                          <p className="text-muted-foreground">{event.day} • {event.time}</p>
-                        </div>
-                      </div>
-                      <div className="text-left sm:text-right">
-                        <p className="font-semibold text-lg">{event.artist}</p>
-                        <p className="text-accent">{event.genre}</p>
-                        {event.price && <p className="text-primary font-semibold mt-1">{event.price}</p>}
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       <section id="hours" className="py-20 bg-card">
         <div className="container mx-auto px-4">
